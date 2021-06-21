@@ -1,0 +1,22 @@
+{% extends "layout/basic.html" %}
+{%block content%}
+{% load static %}
+{%for ff in poost%}
+<div class="container my-5">
+      <div class="row justify-content-md-center">
+        <div class = "col-md-8">
+          <img class="w-100" src="{{ff.image.url}}">
+      </div>
+</div>
+<h2 >{{tr.name}}</h2>
+ <p>опубликовано:{{ff.create_at}}</p>
+ <p>Продавец:{{ff.salesperson}}</p>
+ <p>Номер продавца:{{ff.number}}</p>
+ <p>пробег:{{ff.mileage}}</p>
+ <p>цена:{{ff.price}}$</p>
+ <p>Машина {{ff.age}} года</p>
+ <p>Причина продажи::{{ff.text}}</p>
+
+{%endfor%}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "layout/bsic.html" %}
+{%blck content%}
+{% load static %}
+{%for ff in poost%}
+<div class="container my-5">
+      <div class="row justify-content-md-center">
+        <div class = "col-md-8">
+          <img class="w-100" src="{{ff.image.url}}">
+      </div>
+</div>
+Такого сайта нет. Его создал Столярчук Тарас для учебы и портфолио.Чтобы связаться со мной, напишите на адрес электронной почты:tarastop777@gmail.com
+
+{%endfor%}
+
+{% endblock %}
